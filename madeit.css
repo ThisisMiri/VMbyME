@@ -1,0 +1,300 @@
+@charset "utf-8";
+
+body {
+    background-color: #EAE8FE;
+}
+
+.img-cola {
+    display: block;
+}
+
+#vm {
+    position: relative;
+    padding-top: 248px;
+    font-family: 'Noto Sans KR', sans-serif;
+}
+
+#vm .box-right,
+#vm .box-left {
+    width: 360px;
+    background-color: #fff;
+    box-sizing: border-box;
+}
+
+#vm .header {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    width: 100%;
+    max-width: 386px;
+    height: 180px;
+    background-image: url("./mediaquery/logo.svg");
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    background-position: center;
+    transform: translateX(-50%);
+}
+
+.vending-machine {
+    max-width: 800px;
+    flex-wrap: wrap;
+    display: flex;
+    justify-content: center;
+    gap: 0 28px;
+}
+
+.vending-machine .box-left {
+    padding: 31px 27px 28px;
+}
+
+.box-left .contents-list {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 12px;
+}
+
+.box-left .contents-list li {
+    position: relative;
+    border-radius: 10px;
+    box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.5);
+}
+
+.box-left .contents-list li:active::before {
+    content: '';
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: 3px solid #6327FE;
+    border-radius: 10px;
+    box-sizing: border-box;
+}
+
+.box-left .contents-list li.sold-out::before {
+    content: '';
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 10;
+    border-radius: 10px;
+    background: no-repeat center / 60px 46px url(./mediaquery/Sold-out.svg) rgba(0, 0, 0, 0.8);
+}
+
+.box-left .contents-list li.sold-out::after {
+    content: '품절';
+    overflow: hidden;
+    position: absolute;
+    text-indent: -9999px;
+    line-height: 0;
+    font-size: 1px;
+    color: transparent;
+}
+
+.box-left .contents-list li.sold-out {
+    pointer-events: none;
+}
+
+
+
+.img-padding li {
+    padding: 11px 0 9px;
+}
+
+.box-left .contents-list .img-cola {
+    width: 36px;
+    margin: 0 auto;
+}
+
+.box-left .txt-drinkname,
+.box-right .txt-drinkname {
+    line-height: 13px;
+    font-size: 12px;
+    margin: 6px 5px 7px;
+    display: inline-block;
+    float: left;
+}
+
+.vending-machine .txt-drinkprice {
+    display: inline-block;
+    font-size: 12px;
+    padding: 5px 12px;
+    background-color: #6327FE;
+    border-radius: 50px;
+    color: #fff;
+}
+
+.contents-buy .box-leftmoney,
+.contents-buy .input-put,
+.contents-buy .items-choose {
+    padding: 7px 10px;
+    box-sizing: border-box;
+    border-radius: 5px;
+}
+
+
+
+.contents-buy .button-return,
+.contents-buy .button-put,
+.contents-buy .button-get {
+    font-size: 13px;
+    border-radius: 5px;
+    box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.8);
+}
+
+.box-left .contents-buy {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 12px;
+    margin-top: 20px;
+}
+
+.contents-buy .box-leftmoney {
+    grid-column: 1/3;
+    font-size: 14px;
+    background-color: #EAE8FE;
+}
+
+.box-leftmoney .txt-won {
+    float: right;
+}
+
+.contents-buy .input-put {
+    grid-column: 1/3;
+    border: 1px solid #BDBDBD;
+}
+
+.contents-buy .button-get {
+    font-weight: 700;
+    background-color: #6327FE;
+    color: #fff;
+}
+
+.contents-buy .items-choose {
+    grid-column: 1/3;
+    height: 106px;
+    overflow-y: scroll;
+    border: 1px solid #BDBDBD;
+    background-color: #EAE8FE;
+}
+
+.items-choose li {
+    padding: 8px;
+    border-radius: 5px;
+    background-color: #fff;
+    box-sizing: border-box;
+}
+
+.items-choose li+li {
+    margin-top: 6px;
+}
+
+
+.items-choose .img-cola {
+    float: left;
+}
+
+.items-choose .img-cola {
+    width: 18px;
+}
+
+.items-choose .txt-drinkprice {
+    margin-left: 10px;
+    line-height: 33px;
+    font-size: 9px;
+    padding-left: 10px;
+
+}
+
+.items-choose .number-count {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 30px;
+    height: 30px;
+    border: 1px solid #BDBDBD;
+    border-radius: 5px;
+    float: right;
+}
+
+
+
+#vm .box-right {
+    background-color: #EAE8FE;
+}
+
+.box-right .contents-mymoney {
+    padding: 9px 27px;
+    background-color: #fff;
+}
+
+.contents-mymoney .box-money {
+    padding: 6px 10px;
+    line-height: 20px;
+    background-color: #EAEAEA;
+    border-radius: 5px;
+}
+
+.contents-mymoney .txt-money {
+    float: right;
+    font-weight: 700;
+}
+
+
+
+
+.box-right .contents-getdrink {
+    margin-top: 20px;
+    padding: 25px 27px 32px;
+    background-color: #fff;
+}
+
+.box-right .txt-getdrink {
+    display: block;
+    text-align: center;
+    margin-bottom: 13px;
+    font-size: 14px;
+    font-weight: 700;
+}
+
+.box-right .items-choose {
+    height: 364px;
+    overflow-y: scroll;
+    padding: 12px;
+    background-color: #EAE8FE;
+    border: 1px solid #BDBDBD;
+    box-sizing: border-box;
+    border-radius: 5px;
+}
+
+.box-right .txt-totalprice {
+    display: block;
+    text-align: right;
+    font-size: 12px;
+    margin-top: 10px;
+}
+
+
+@media only screen and (min-width: 320px) and (max-width: 480px) and (-webkit-min-pixel-ratio:2) {
+    body {
+        background-color: #fff;
+    }
+
+    #vm {
+        padding-top: 65px;
+    }
+
+    #vm .header {
+        width: 166px;
+        height: 70px;
+    }
+
+    .box-right .contents-getdrink {
+        margin-top: 0;
+        padding: 31px 27px 32px;
+    }
+}

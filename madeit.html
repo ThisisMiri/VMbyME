@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>I made it - cola cola</title>
+    <link rel="stylesheet" href="madeit.css">
+    <link rel="stylesheet" href="reset.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@500;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+    <main id="vm">
+        <h1 class="header ir">cola cola</h1>
+        <div class="vending-machine">
+            <section class="box-left">
+                <h2 class="ir">자판기 화면</h2>
+                <ul class="contents-list img-padding">
+
+                    <li>
+                        <button class="button-drinkinfo" type="button">
+                            <img src="./mediaquery/Original_Cola.svg" alt="Original Cola" class="img-cola">
+                            <p class="txt-drinkname">Original Cola</p>
+                            <span class="txt-drinkprice">1000원</span>
+                        </button>
+                    </li>
+                    <li class="sold-out">
+                        <button class="button-drinkinfo" type="button">
+                            <img src="./mediaquery/violet_Cola.svg" alt="Violet Cola" class="img-cola">
+                            <p class="txt-drinkname">Violet Cola</p>
+                            <span class="txt-drinkprice">1000원</span>
+                        </button>
+                    </li>
+                    <li>
+                        <button class="button-drinkinfo" type="button">
+                            <img src="./mediaquery/Yellow_Cola.svg" alt="yellow Cola" class="img-cola">
+                            <p class="txt-drinkname">Yellow Cola</p>
+                            <span class="txt-drinkprice">1000원</span>
+                        </button>
+                    </li>
+                    <li>
+                        <button class="button-drinkinfo" type="button">
+                            <img src="./mediaquery/Cool_Cola.svg" alt="cool Cola" class="img-cola">
+                            <p class="txt-drinkname">Cool Cola</p>
+                            <span class="txt-drinkprice">1000원</span>
+                        </button>
+                    </li>
+                    <li>
+                        <button class="button-drinkinfo" type="button">
+                            <img src="./mediaquery/Green_Cola.svg" alt="green Cola" class="img-cola">
+                            <p class="txt-drinkname">Green Cola</p>
+                            <span class="txt-drinkprice">1000원</span>
+                        </button>
+                    </li>
+                    <li>
+                        <button class="button-drinkinfo" type="button">
+                            <img src="./mediaquery/Orange_Cola.svg" alt="orange Cola" class="img-cola">
+                            <p class="txt-drinkname">Orange Cola</p>
+                            <span class="txt-drinkprice">1000원</span>
+                        </button>
+                    </li>
+                </ul>
+
+                <section class="contents-buy ">
+                    <h2 class="ir">구입 정보</h2>
+                    <div class="box-leftmoney">
+                        잔액 :
+                        <p class="txt-won">원</p>
+                    </div>
+                    <button type="button" class="button-return">거스름돈 반환</button>
+                    <input type="number" class="input-put" placeholder="입금액 입력">
+                    <button class="button-put" type="button">입금</button>
+                    <p class="ir"> 내가 선택한 음료 목록</p>
+                    <ul class="items-choose">
+                        <li>
+                            <button class="button-drinkinfo" type="button">
+                                <img src="./mediaquery/Orange_Cola.svg" alt="orange Cola" class="img-cola">
+                                <p class="txt-drinkname">Orange Cola</p>
+                                <span class="number-count">1</span>
+                            </button>
+                        </li>
+                        <li>
+                            <button class="button-drinkinfo" type="button">
+                                <img src="./mediaquery/Orange_Cola.svg" alt="orange Cola" class="img-cola">
+                                <p class="txt-drinkname">Orange Cola</p>
+                                <span class="number-count">1</span>
+                            </button>
+                        </li>
+                        <li>
+                            <button class="button-drinkinfo" type="button">
+                                <img src="./mediaquery/Orange_Cola.svg" alt="orange Cola" class="img-cola">
+                                <p class="txt-drinkname">Orange Cola</p>
+                                <span class="number-count">1</span>
+                            </button>
+                        </li>
+                    </ul>
+                    <button class="button-get" type="button">획득</button>
+                </section>
+            </section>
+
+
+            <section class="box-right">
+                <h2 class="ir">내 정보</h2>
+
+                <div class="contents-mymoney">
+                    <div class="box-money">
+                        소지금 :
+                        <span class="txt-money">30,000원</span>
+                    </div>
+                </div>
+
+                <div class="contents-getdrink">
+                    <strong class="txt-getdrink">획득한 음료</strong>
+                    <ul class="items-choose">
+                        <li>
+                            <button class="button-drinkinfo" type="button">
+                                <img src="./mediaquery/Orange_Cola.svg" alt="orange Cola" class="img-cola">
+                                <p class="txt-drinkname">Orange Cola</p>
+                                <span class="number-count">1</span>
+                            </button>
+                        </li>
+                    </ul>
+                    <strong class="txt-totalprice">총금액 : 0원</strong>
+                </div>
+            </section>
+        </div>
+    </main>
+</body>
+
+</html>
